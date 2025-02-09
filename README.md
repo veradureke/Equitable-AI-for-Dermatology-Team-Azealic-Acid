@@ -5,7 +5,8 @@ This project focuses on building a machine learning model that classifies variou
 
 This challenge is from Break Through Tech and the Algorithmic Justice League to help address the issue of diagnosing people with darker skin tones by building an inclusive machine learning model for dermatology.
 
-
+- [FitzPatrick 17k Dataset Paper](https://arxiv.org/abs/2104.09957)
+- [Kaggle Competition Page](https://www.kaggle.com/competitions/bttai-ajl-2025/overview)
 
 ## Task: Skin Condition Classification
 
