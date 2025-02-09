@@ -11,6 +11,7 @@ This challenge is from Break Through Tech and the Algorithmic Justice League to 
 
 The goal is to develop an ML model that accurately classifies skin conditions using the provided dataset. The competition is evaluated based on the weighted average F1 score, which balances precision and recall across different class labels.
 - Weighted F1 Score: Ensures performance is measured fairly across all classes, accounting for class imbalance.
+    - F1 = 2 * (precision * recall) / (precision + recall)
 
 
 ## Dataset
@@ -19,3 +20,11 @@ The dataset used is a subset of the FitzPatrick17k dataset, which contains ~17,0
 - Source: DermaAmin & Atlas Dermatologico (dermatology image repositories)
 - Skin tone labels: Self-described & externally labeled FST scores
 
+
+## Getting Started
+
+1) Download dataset 
+
+```
+kaggle competitions download -c bttai-ajl-2025
+```
