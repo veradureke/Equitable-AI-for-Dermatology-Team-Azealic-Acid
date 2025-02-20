@@ -17,7 +17,7 @@ The goal is to develop an ML model that accurately classifies skin conditions us
 
 ## Dataset
 
-The dataset used is a subset of the FitzPatrick17k dataset, which contains ~17,000 labeled images of different dermatological conditions. The competition dataset consists of 4,500 images representing 16 skin conditions, categorized by the FitzPatrick Skin Type Scale (FST).
+The dataset used is a subset of the FitzPatrick17k dataset, which contains ~17,000 labeled images of different dermatological conditions. The competition dataset consists of 4,500 images representing 21 skin conditions across skin tones that are categorized by the FitzPatrick Skin Type Scale (FST).
 - Source: DermaAmin & Atlas Dermatologico (dermatology image repositories)
 - Skin tone labels: Self-described & externally labeled FST scores
 
