@@ -80,3 +80,20 @@ In this EDA, we performed several key steps:
 - Explored the frequency of skin condition labels and partitions.
 - Calculated and visualized correlations between different encoded categorical variables.
 The insights from this analysis provide a foundation for building machine learning models to classify skin conditions based on these features. Future steps could involve feature engineering, model training, and evaluating predictive accuracy.
+
+## Model Development
+The model we decided to start with for this task was ResNet50. This was recommended to us by our TA as a pretty standard model for image classification problems. This model is a 50-layer residual network that uses residual connections (skip connections) to help in training deeper networks by mitigating the vanishing gradient problem. It allows gradients to flow more easily during backpropagation, leading to overall better convergence. The model is pre-trained on ImageNet, making it efficient for transfer learning. 
+
+Later in the competition, we decided to also try out the [Google Derm Foundation model on HuggingFace](https://huggingface.co/google/derm-foundation) in hopes of achieving a higher accuracy. This model is a pre-trained BiT-101x3 CNN designed to accelerate AI development for dermatology image analysis. It generates 6144-dimensional embeddings from skin images, capturing dense features crucial for classification tasks. This model was pre-trained using contrastive learning on large-scale image-text pairs and is tailored for dermatology using clinical datasets. 
+
+## Impact Narrative
+Dermatology AI tools frequently underperform for people with darker skin tones due to a lack of diverse training data, as most datasets are primarily composed of images from lighter-skin tones as we saw during our EDA. As a result, these models have lower accuracy in detecting skin conditions in people with darker skin, leading to patient misdiagnosis, delayed treatments, and worse health outcomes. When AI systems perpetuate these inequities, they continue to promote historical biases and further hurt marginalized communities.
+
+Our project seeks to address these disparities by training a model that classifies skin conditions equitably across diverse skin tones. To do this, we did the following: 
+-  By using image augmentation, we can even out the representation of skin tones through rotatings, transformations, etc.
+- We use visualizations and interpretability techniques to understand how our model makes predictions, uncovering / correcting any biases in decision-making.
+
+This project is a part of a larger movement towards ethical and responsible AI in healthcare. By highlighting the real-world consequences of biased AI and working towards solutions, we hope to contribute to systemic change in dermatology and beyond.
+
+## Next Steps and Further Improvements
+The next steps for this project would include further technical development and deeper fairness analysis to improve the model's performance and accuracy. We could experiment with more advanced architectures and, on the data side, create a more indepth and balanced dataset for the model to diagnose accurately across a variety of skin tones. When we have a fully functional product that has gone through real-world testing we can integrate the product with dermatologists in local clinics to validate patient diagnoses in real-world appointments. 
