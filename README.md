@@ -1,6 +1,16 @@
 # Equitable AI for Dermatology Team Azealic Acid
 > Team Members: Janelle Chan, Vera Dureke, Ena Macahiya, Natasha Prabhoo, Shreya Vallala
 
+## Project Highlights 
+- Trained an equitable AI model that accurately classifies 21 skin conditions across diverse skin tones
+- Achieved 70%+ training accuracy using a specialized dermatological foundation model, and 68% test accuracy against the competition dataset
+- Identified significant performance improvements when using domain-specific models over general image classification approaches
+- Demonstrated the importance of balanced datasets for consistent cross-demographic performance
+- Contributed to addressing healthcare disparities in dermatology AI tools
+
+## Setup and Execution: 
+We approached this project with careful planning. Our team first explored the competition requirements and the provided FitzPatrick17k dataset subset. We established a collaborative workflow using GitHub for version control and code sharing, which allowed us to efficiently track progress and coordinate our efforts. We also utilized a Notion sprint-board to track progress and set goals for our team. After analyzing the dataset characteristics, we tested different model approaches and implemented data preprocessing pipelines to standardize the images and prepare them for training.
+
 ## Overview
 Our team participated in the Equitable AI for Dermatology Kaggle competition with the goal of training a model that could classify different skin conditions across diverse skin tones, using a provided subset of the FitzPatrick17k dataset. This smaller dataset contains approximately 4,500 images representing 21 skin conditions from the total 100+ in the full dataset. The motivation for this was the fact that dermatology AI tools underperform for people with darker skin tones due to a lack of training data. The unfortunate impact includes diagnostic errors, delayed treatments, and health disparities for underserved communities.
 
@@ -85,6 +95,15 @@ The insights from this analysis provide a foundation for building machine learni
 The model we decided to start with for this task was ResNet50. This was recommended to us by our TA as a pretty standard model for image classification problems. This model is a 50-layer residual network that uses residual connections (skip connections) to help in training deeper networks by mitigating the vanishing gradient problem. It allows gradients to flow more easily during backpropagation, leading to overall better convergence. The model is pre-trained on ImageNet, making it efficient for transfer learning. 
 
 Later in the competition, we decided to also try out the [Google Derm Foundation model on HuggingFace](https://huggingface.co/google/derm-foundation) in hopes of achieving a higher accuracy. This model is a pre-trained BiT-101x3 CNN designed to accelerate AI development for dermatology image analysis. It generates 6144-dimensional embeddings from skin images, capturing dense features crucial for classification tasks. This model was pre-trained using contrastive learning on large-scale image-text pairs and is tailored for dermatology using clinical datasets. 
+
+## Results and Key Findings
+### Results
+From Ena’s ResNet50 program, the top value accuracy achieved with training was 0.26. When ran against the competition test dataset, the top performance was 0.01230. The other accuracy results from my teammate’s programs are unknown.
+From the Google Derm Foundation program, the top value accuracy score achieved with training was 0.70. When ran against the competition test dataset, the top performance was 0.68480. Had the test finished running on time, we may have been able to place 5th within the entire competition.
+### Key Findings
+- Standard image classification models performed poorly despite augmentation, while models specifically designed for dermatological analysis showed significant improvement.
+- Image augmentation and transfer learning from dermatology-specific pre-trained models were crucial for responsible AI implementation.
+- Class imbalance across skin tones required targeted balancing techniques, with models trained on balanced datasets showing more consistent cross-demographic performance.
 
 ## Impact Narrative
 Dermatology AI tools frequently underperform for people with darker skin tones due to a lack of diverse training data, as most datasets are primarily composed of images from lighter-skin tones as we saw during our EDA. As a result, these models have lower accuracy in detecting skin conditions in people with darker skin, leading to patient misdiagnosis, delayed treatments, and worse health outcomes. When AI systems perpetuate these inequities, they continue to promote historical biases and further hurt marginalized communities.
